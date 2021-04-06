@@ -1,5 +1,5 @@
 .body {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .page-header {
@@ -133,5 +133,5 @@
 }
 
 .text--italic {
- font-style: italic;
+    font-style: italic;
 }
