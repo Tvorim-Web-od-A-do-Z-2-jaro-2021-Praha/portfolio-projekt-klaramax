@@ -1,0 +1,137 @@
+.body {
+  overflow: hidden;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    line-height: 25px;
+}
+
+.page-header__home-icon {
+    width: 25px;
+    height: 25px;
+    opacity: 0.8;
+}
+
+.text--hover:hover {
+    cursor: pointer;
+}
+
+.text--opacity:hover {
+    opacity: 1;
+}
+
+.page-header__menu-block--gray {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    padding: 15px;
+    color: #555555;
+}
+
+.page-header__menu-item {
+    padding: 6px 18px;
+    font-weight: bold;
+}
+
+.page-header__menu-item:hover {
+    cursor: pointer;
+    background-color: #faf0e6;
+    box-shadow: 0 10px 20px #faf0e6;
+    border-radius: 5px;
+}
+
+.page-content--beige {
+    display: flex;
+    padding: 20px 40px;
+    position: relative;
+    height: 60vh;
+    align-items: center;
+    background-color: #E6DACE;
+}
+
+.left-column {
+    display: flex;
+    flex-flow: column;
+}
+
+.left-column__my-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    line-height: 2;
+}
+
+.right-column {
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+    margin-left: 30px;
+    padding: 30px;
+    text-align: justify;
+    max-width: 35vw;
+}
+
+.right-column__text--big {
+    font-size: x-large;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.right-column__text--medium {
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.right-column__text--normal {
+    margin-bottom: 10px;
+}
+
+.right-column__text--link {
+    margin: 10px 0;
+}
+
+.text--link:hover {
+    color: darkblue;
+    cursor: pointer;
+}
+
+.page-footer {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    line-height: 25px;
+}
+
+.page-footer__copyright {
+    display: flex;
+}
+
+.text--bold {
+    font-weight: bold;
+}
+
+.page-footer__contact-block {
+    display: flex;
+    align-items: center;
+}
+
+.page-footer__contact-icon {
+    display: flex;
+    align-items: center;
+    height: 20px;
+}
+
+.page-footer__contact-item {
+    margin-left: 20px;
+}
+
+.text--italic {
+ font-style: italic;
+}
