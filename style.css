@@ -1,5 +1,5 @@
 .body {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .page-header {
@@ -50,6 +50,8 @@
     height: 60vh;
     align-items: center;
     background-color: #E6DACE;
+    justify-content: center;
+    cursor: default;
 }
 
 .left-column {
@@ -75,24 +77,24 @@
     max-width: 35vw;
 }
 
-.right-column__text--big {
+.right-column__text {
+    letter-spacing: 0.3px;
+}
+
+.text--big {
     font-size: x-large;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-.right-column__text--medium {
+.text--medium {
     font-size: large;
     font-weight: bold;
     margin-bottom: 15px;
 }
 
-.right-column__text--normal {
+.text--normal {
     margin-bottom: 10px;
-}
-
-.right-column__text--link {
-    margin: 10px 0;
 }
 
 .text--link:hover {
@@ -105,8 +107,9 @@
     flex: 1;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 40px;
+    padding: 50px 40px;
     line-height: 25px;
+    cursor: default;
 }
 
 .page-footer__copyright {
@@ -133,5 +136,9 @@
 }
 
 .text--italic {
- font-style: italic;
+    font-style: italic;
+}
+
+.text--margin {
+    margin-top: 15px;
 }
