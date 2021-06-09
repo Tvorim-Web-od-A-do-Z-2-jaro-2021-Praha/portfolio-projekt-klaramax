@@ -185,6 +185,19 @@
   }
 }
 
+.text--link {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+.text--link:hover {
+  -webkit-transform: scale(1.08, 1.08);
+          transform: scale(1.08, 1.08);
+  -webkit-transition: 1.5s ease-out;
+  transition: 1.5s ease-out;
+}
+
 @media only screen and (min-width: 600px) {
   .page-content__main {
     display: -webkit-box;
@@ -825,12 +838,61 @@
 }
 
 .svg-3:hover {
-  -webkit-transform: scale(1.05, 1.05);
-          transform: scale(1.05, 1.05);
+  -webkit-animation: grow3 1.3s infinite linear;
+          animation: grow3 1.3s infinite linear;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes grow3 {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+
+@keyframes grow3 {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
 }
 
 .svg-4:hover svg > rect[id="blue"] {
   fill: #FF0000;
+  position: relative;
+  -webkit-animation: mymove;
+          animation: mymove;
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+@-webkit-keyframes mymove {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 20px;
+  }
+}
+
+@keyframes mymove {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 20px;
+  }
 }
 
 .svg-5:hover svg > line {

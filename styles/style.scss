@@ -113,6 +113,17 @@
   }
 }
 
+.text--link {
+  text-decoration: none;
+  color: $black;
+  font-weight: bold;
+
+  &:hover {
+    transform: scale(1.08,1.08);
+    transition: 1.5s ease-out;
+  }
+}
+
 @media only screen and (min-width: 600px) {
   .page-content__main {
     @include flex(center, center, row);
@@ -512,13 +523,32 @@
 }
 
 .svg-3:hover {
-  transform: scale(1.05, 1.05);
+  animation: grow3 1.3s infinite linear;
+  animation-direction: alternate;
+}
+
+@keyframes grow3 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
 }
 
 .svg-4:hover {
   svg > rect[id="blue"] {
     fill: $red;
+    position: relative;
+    animation: mymove;
+    transform: scale(1.05,1.05);
+    transition: 2s;
   }
+}
+
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 20px;}
 }
 
 .svg-5:hover {
