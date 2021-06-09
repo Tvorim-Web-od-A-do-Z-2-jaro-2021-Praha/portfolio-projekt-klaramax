@@ -30,11 +30,10 @@
   @include flex(center, space-between, row);
   padding: 20px 40px 10px 40px;
   line-height: 25px;
-  // position: sticky;
-  // top: 0px;
+  position: sticky;
+  top: 0px;
   background-color: $white;
-  // border-bottom: 60px solid $dark-linen;
-  // z-index: 10;
+  z-index: 10;
 
   &__home-icon {
     width: 25px;
@@ -206,6 +205,7 @@
     margin-top: 15px;
   }
 }
+
 
 @media only screen and (min-width: 600px) {
   .page-footer {
@@ -429,6 +429,7 @@
   flex-flow: column;
   align-items: center;
   border-bottom: 4rem solid $dark-linen;
+  padding-top: 100px;
 
   &-content {
     display: flex;
@@ -619,4 +620,12 @@
     cursor: default;
   }
 }
-  
+
+.page-content__main {
+  padding-top: 99px;
+  background-color: $dark-linen;
+}
+
+.page-content__technologies {
+  padding-top: 120px;
+}
