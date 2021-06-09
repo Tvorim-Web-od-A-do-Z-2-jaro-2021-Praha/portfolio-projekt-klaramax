@@ -9,16 +9,17 @@
 </head>
 <body>
 <div class="page-header">
-    <img class="page-header__home-icon text--hover text--opacity" src="obrazky/home.png" alt="home icon">
-    <div class="page-header__menu-block--gray">
-        <span class="page-header__menu-item">Návrhy webu</span>
-        <span class="page-header__menu-item">Vývoj aplikací</span>
-        <span class="page-header__menu-item">Znalosti</span>
-        <span class="page-header__menu-item">Reference</span>
-        <span class="page-header__menu-item">Kontakt</span>
+    <a class="page-header__menu-item" href="#">
+    <img class="page-header__home-icon text--hover text--opacity" src="obrazky/home.png" alt="home icon"></a>
+    <div class="page-header__menu-block-right">
+        <a class="page-header__menu-item" href="#main">Návrhy webu</a>
+        <a class="page-header__menu-item" href="#technologies">Znalosti</a>
+        <a class="page-header__menu-item" href="#offer">Vývoj aplikací</a>
+        <a class="page-header__menu-item" href="#customers">Reference</a>
+        <a class="page-header__menu-item" href="#footer">Kontakt</a>
     </div>
 </div>
-<div class="page-content__main">
+<div class="page-content__main" id="main">
     <div class="left-column">
         <img class="left-column__my-photo" src="obrazky/me.png" alt="photo of me">
         <div class="left-column__my-links">Profil na:
@@ -50,7 +51,52 @@
         </div>
     </div>
 </div>
-<div class="page-section__offer">
+
+<div class="page-content__technologies" id="technologies">
+    <div class="page-content__technologies-header text--big">Znalost technologií a software</div>
+    <div class="page-content__technologies-left">
+        <div class="page-content__technologies-left-header">Front-end</div>
+        <div class="page-content__technologies-left-header">Back-end</div>
+        <div class="page-content__technologies-left-header">Ostatní</div>
+    </div>
+    <div class="page-content__technologies-left-border"></div>
+    <div class="page-content__technologies-right">
+        <div class="page-content__technologies-right-header">JavaScript</div>
+        <ul class="page-content__technologies-list">
+            <li>ES6</li>
+            <li>React</li>
+            <li>Apollo
+            <li>Webpack</li>
+            <li>GraphQL</li>
+            <li>TypeScript</li>
+        </ul>
+        <div class="page-content__technologies-right-header">HTML & CSS</div>
+        <ul class="page-content__technologies-list">
+            <li>Responsive web sites</li>
+            <li>SASS</li>
+            <li>CSS-in-JS</li>
+            <li>Bootstrap</li>
+            <li>Material UI</li>
+        </ul>
+        <ul class="page-content__technologies-list">
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>PostgreSQL</li>
+            <li>Heroku</li>
+            <li>Firebase</li>
+        </ul>
+        <ul class="page-content__technologies-list">
+            <li>Linux</li>
+            <li>WebSocket</li>
+            <li>Git</li>
+            <li>SVN</li>
+            <li>Visual Studio</li>
+            <li>Selenium</li>
+        </ul>
+    </div>
+</div>
+
+<div class="page-section__offer" id="offer">
     <div class="page-section__offer-header text--big">
         Co v rámci vývoje nabízím a garantuji?
     </div>
@@ -126,50 +172,19 @@
         </div>
     </div>
 </div>
-<div class="page-content__technologies">
-    <div class="page-content__technologies-header text--big">Znalost technologií a software</div>
-    <div class="page-content__technologies-left">
-        <div class="page-content__technologies-left-header">Front-end</div>
-        <div class="page-content__technologies-left-header">Back-end</div>
-        <div class="page-content__technologies-left-header">Ostatní</div>
-    </div>
-    <div class="page-content__technologies-left-border"></div>
-    <div class="page-content__technologies-right">
-        <div class="page-content__technologies-right-header">JavaScript</div>
-        <ul class="page-content__technologies-list">
-            <li>ES6</li>
-            <li>React</li>
-            <li>Apollo
-            <li>Webpack</li>
-            <li>GraphQL</li>
-            <li>TypeScript</li>
-        </ul>
-        <div class="page-content__technologies-right-header">HTML & CSS</div>
-        <ul class="page-content__technologies-list">
-            <li>Responsive web sites</li>
-            <li>SASS</li>
-            <li>CSS-in-JS</li>
-            <li>Bootstrap</li>
-            <li>Material UI</li>
-        </ul>
-        <ul class="page-content__technologies-list">
-            <li>Node.js</li>
-            <li>Express.js</li>
-            <li>PostgreSQL</li>
-            <li>Heroku</li>
-            <li>Firebase</li>
-        </ul>
-        <ul class="page-content__technologies-list">
-            <li>Linux</li>
-            <li>WebSocket</li>
-            <li>Git</li>
-            <li>SVN</li>
-            <li>Visual Studio</li>
-            <li>Selenium</li>
-        </ul>
+
+<div class="page-section__customers" id="customers">
+    <div class="page-section__customers-header text--big">Reference</div>
+    <div class="page-section__customers-logos">
+        <img class="page-section__customers-item" src="obrazky/cust-trinecke_zelezarny.png" alt="customer logo" />
+        <img class="page-section__customers-item" src="obrazky/cust-edwards.jpg" alt="customer logo" />
+        <img class="page-section__customers-item" src="obrazky/cust-Pernod_Ricard.png" alt="customer logo" />
+        <img class="page-section__customers-item" src="obrazky/cust-schneider_electric.png" alt="customer logo" />
+        <img class="page-section__customers-item" src="obrazky/cust-OR-Plus.jpg" alt="customer logo" />
     </div>
 </div>
-<div class="page-footer">
+
+<div class="page-footer" id="footer">
     <span class="page-footer__copyright">
         <span class="text--bold">© &nbsp;</span>2021 KLÁRA MAXOVÁ | ALL RIGHTS RESERVED</span>
     <span class="page-footer__contact-block">

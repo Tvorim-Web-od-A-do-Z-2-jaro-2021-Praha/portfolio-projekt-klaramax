@@ -28,8 +28,13 @@
 
 .page-header {
   @include flex(center, space-between, row);
-  padding: 20px 40px;
+  padding: 20px 40px 10px 40px;
   line-height: 25px;
+  // position: sticky;
+  // top: 0px;
+  background-color: $white;
+  // border-bottom: 60px solid $dark-linen;
+  // z-index: 10;
 
   &__home-icon {
     width: 25px;
@@ -37,16 +42,17 @@
     opacity: 0.8;
   }
 
-  &__menu-block--gray {
+  &__menu-block-right {
     @include flex(center, flex-end, row);
     flex-grow: 1;
     padding: $padding-small;
-    color: $davy-gray;
   }
 
   &__menu-item {
     padding: 6px 18px;
     font-weight: bold;
+    text-decoration: none;
+    color: $davy-gray;
 
     &:hover {
       cursor: pointer;
@@ -58,10 +64,16 @@
 }
 
 @media only screen and (max-width: 599px) {
+  .page-header__menu-block-right {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 599px) {
   .page-content__main {
     @include flex(center, center, column);
     padding: $padding-small $padding-big;
-    position: relative;
     background-color: $dark-linen;
     cursor: default;
     flex-wrap: wrap;
@@ -105,7 +117,6 @@
   .page-content__main {
     @include flex(center, center, row);
     padding: 20px 40px;
-    position: relative;
     min-height: 60vh;
     background-color: $dark-linen;
     cursor: default;
@@ -250,34 +261,9 @@
 }
 
 
-@media only screen and (min-width: 940px) {
-  .page-content__technologies {
-    display: grid;
-    padding: 60px 60px 30px 60px;
-    cursor: default;
-    grid-template-rows: repeat(9, 30px);
-    grid-template-columns:  200px 20px minmax(200px, 600px);
-    row-gap: 5px;
-    justify-content: center;
-    flex-wrap: wrap;
-    border-top: 4rem solid $dark-linen;
-  }
-}
-
-@media only screen and (max-width: 940px) {
-  .page-content__technologies {
-    grid-template-rows: repeat(9, 40px);
-    display: grid;
-    padding: 60px 60px 30px 60px;
-    cursor: default;
-    grid-template-columns:  200px 20px minmax(200px, 600px);
-    row-gap: 5px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-}
-
 .page-content__technologies {
+
+  position: relative;
 
   &-header {
     grid-column-start: 1;
@@ -348,7 +334,6 @@
     flex-wrap: wrap;
     padding: 0;
     margin: 0;
-    min-width: 350px;
 
     &:nth-of-type(1) {
       grid-row: 2/3;
@@ -387,19 +372,59 @@
   }
 }
 
+@media only screen and (min-width: 600px) {
+  .page-content__technologies {
+    display: grid;
+    padding: 60px 60px 0 60px;
+    cursor: default;
+    grid-template-rows: repeat(9, 30px);
+    grid-template-columns:  200px 20px minmax(200px, 600px);
+    row-gap: 5px;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-bottom: 4rem solid $dark-linen;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .page-content__technologies {
+    grid-template-rows: repeat(9, 40px);
+    display: grid;
+    padding: 60px 20px 0 20px;
+    cursor: default;
+    grid-template-columns:  100px 20px minmax(200px, 600px);
+    row-gap: 5px;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-bottom: 4rem solid $dark-linen;
+
+    &-list {
+      max-width: 100em;
+      min-width: 30px;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .page-content__technologies-list {
+    min-width: 350px;
+  }
+}
+
 .page-section__offer {
   display: flex;
   padding: 2rem;
   flex-wrap: wrap;
   flex-flow: column;
   align-items: center;
+  border-bottom: 4rem solid $dark-linen;
 
   &-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin: 1rem 4rem;
+    margin: 0 4rem;
   }
 
   &-item {
@@ -481,9 +506,13 @@
   }
 }
 
-.svg-2:hover, .svg-3:hover {
+.svg-2:hover {
   animation-duration: 1s;
   animation-name: swing;
+}
+
+.svg-3:hover {
+  transform: scale(1.05, 1.05);
 }
 
 .svg-4:hover {
@@ -542,3 +571,22 @@
     transform: translateX(0);
   }
 }
+
+.page-section__customers {
+  @include flex(center, center, column);
+  padding: 2rem;
+  flex-wrap: wrap;
+
+  &-logos {
+    @include flex(center, center, row);
+    flex-wrap: wrap;
+  }
+
+  &-item {
+    height: 5rem;
+    max-width: 50em;
+    padding: 3rem;
+    cursor: default;
+  }
+}
+  
